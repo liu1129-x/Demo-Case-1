@@ -2,7 +2,6 @@
 
 int main(void)
 {
-    printf("hello world!\n");
-    printf("这是一个测试。\n");
+    printf("hello world!\n你好!\n");
     return 0;
 }
