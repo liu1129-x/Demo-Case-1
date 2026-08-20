@@ -1,4 +1,5 @@
 #include <stdio.h>
+// #include <windows.h>
 
 //企业发放的奖金根据利润提成。
 // int main(void)
@@ -31,17 +32,54 @@
 一个整数，它加上100后是一个完全平方数，再加上168又是一个完全平方数，
 请问该数是多少。
 */
-int main() {
-    for (int a = 1; a * a <= 168; a++) {   // 只枚举较小的因数 a
-        if (168 % a == 0) {
-            int b = 168 / a;
-            // 必须 a < b 且同奇偶
-            if (a < b && (a + b) % 2 == 0) {
-                int m = (b - a) / 2;
-                int x = m * m - 100;
-                printf("x = %d (m=%d, n=%d)\n", x, m, (a + b) / 2);
-            }
-        }
+// int main() {
+//     for (int a = 1; a * a <= 168; a++) {   // 只枚举较小的因数 a
+//         if (168 % a == 0) {
+//             int b = 168 / a;
+//             // 必须 a < b 且同奇偶
+//             if (a < b && (a + b) % 2 == 0) {
+//                 int m = (b - a) / 2;
+//                 int x = m * m - 100;
+//                 printf("x = %d (m=%d, n=%d)\n", x, m, (a + b) / 2);
+//             }
+//         }
+//     }
+//     return 0;
+// }
+
+// int main(void)
+// {
+//     int a = 0;
+//     scanf("%d", &a);
+//     int n = a;
+//     int arr[n];
+//     for(int i = 0; i < n; i++)
+//     {
+//         printf("%d ", i);
+//     }
+//     printf("\n");
+//     return 0;
+// }
+
+#include <string.h>
+
+int main(void)
+{
+    char arr1[] = "hello world!";
+    char arr2[] = "************";
+
+    int left = 0;
+    int right = strlen(arr1) - 1;
+
+    while(left <= right)
+    {
+        arr2[left] = arr1[left];
+        arr2[right] = arr1[right];
+        printf("%s\n", arr2);
+        // Sleep(1000);
+        left++;
+        right--;
     }
+
     return 0;
 }
